@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './styles/App.scss';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Additems from './pages/Additems';
+import Itemslist from './pages/Itemslist';
+import Checkitems from './pages/Checkitems';
+import ItemsProvider from './Hooks/FetchItemsContext';
+import { Routes, Route } from "react-router-dom";
+import "bootstrap-icons/font/bootstrap-icons.css";
 function App() {
   return (
+    <ItemsProvider>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Navbar/>
+     <Routes>
+        <Route path="/" element={ <Home/> } />
+        <Route path="allitems" element={ <Itemslist/> } />
+        <Route path="additem" element={ <Additems/> } />
+        <Route path="checkeditems" element={ <Checkitems/> } />
+      </Routes>
     </div>
+    </ItemsProvider>
   );
 }
 
