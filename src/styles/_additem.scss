@@ -1,0 +1,10 @@
+.item-add-btn {
+    background-color: rgb(134, 33, 33) !important;
+    border: none !important;
+}
+.item-add-btn:hover {
+    background-color: rgb(82, 18, 18) !important;
+}
+.item-add-btn:focus, .btn:active:focus, .btn.active:focus{
+    outline: none !important;
+}
