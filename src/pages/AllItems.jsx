@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Itemslist from '../components/Itemslist';
 import Cart from '../components/Cart';
-const Home = () => {
+const AllItems = () => {
   return (
     <Container fluid>
       <Row>
@@ -20,4 +20,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default AllItems

@@ -2,7 +2,7 @@ import './styles/App.scss';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Additems from './pages/Additems';
-import Itemslist from './pages/Itemslist';
+import AllItems from './pages/AllItems';
 import Checkitems from './pages/Checkitems';
 import ItemsProvider from './Hooks/FetchItemsContext';
 import { Routes, Route } from "react-router-dom";
@@ -14,7 +14,7 @@ function App() {
     <Navbar/>
      <Routes>
         <Route path="/" element={ <Home/> } />
-        <Route path="allitems" element={ <Itemslist/> } />
+        <Route path="allitems" element={ <AllItems/> } />
         <Route path="additem" element={ <Additems/> } />
         <Route path="checkeditems" element={ <Checkitems/> } />
       </Routes>

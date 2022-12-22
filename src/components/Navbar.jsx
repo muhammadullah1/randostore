@@ -11,14 +11,14 @@ const Navbarr = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className='navbar-main'>
       <Container>
-        <Navbar.Brand><Link to="allitems">Rando Store</Link></Navbar.Brand>
+        <Navbar.Brand as="li" style={{listStyle: "none"}}><Link to="/">Rando Store</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link><Link to="allitems">AllItems</Link></Nav.Link>
-            <Nav.Link><Link to="checkeditems">CheckedItems</Link></Nav.Link>
-            <Nav.Link><Link to="additem">AddItem</Link></Nav.Link>
-            <Nav.Link className='btn btn-outline-secondary px-3 mx-5 rounded-0'><Link to="checkeditems">Cart <Badge bg="text-white">{cart.length}</Badge></Link></Nav.Link>
+            <Nav.Link as="li"><Link to="allitems">AllItems</Link></Nav.Link>
+            <Nav.Link as="li"><Link to="checkeditems">ViewCart</Link></Nav.Link>
+            <Nav.Link as="li"><Link to="additem">AddItem</Link></Nav.Link>
+            <Nav.Link as="li" className='btn btn-outline-secondary px-3 mx-5 rounded-0'><Link to="checkeditems"><i className="bi bi-cart-plus"></i> <Badge bg="text-white">{cart.length}</Badge></Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

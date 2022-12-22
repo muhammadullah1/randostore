@@ -1,13 +1,14 @@
 import React from 'react'
-import { Table } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 import { useItems } from '../Hooks/FetchItemsContext'; 
 
 const Checkitems = () => {
   const itemsList = useItems();
   const { cart, removeFromCart } = itemsList;
+  const totalprice =  cart.reduce((total,currentItem) =>  total = total + Number(currentItem.price) , 0 );
   return (
     <div className='container mx-auto my-5'>
-      <h1 className='text-center my-3'>Checked Items List</h1>
+      <h1 className='text-center my-5'>Checked Items List</h1>
       <Table  bordered hover>
       <thead>
         <tr>
@@ -28,6 +29,10 @@ const Checkitems = () => {
         ))}
       </tbody>
     </Table>
+    <div className='d-flex justify-content-evenly my-5'>
+<Button className='proceed-btn rounded-0' href='https://access.sandbox.checkout.com/connect/token' target='_blank'>Check Out</Button>
+<h3 className=''>Total Rs: {totalprice}</h3>
+    </div>
     </div>
   )
 }
